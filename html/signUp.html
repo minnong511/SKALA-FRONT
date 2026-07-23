@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <form action="signUpResult.html" method="get">
+        <fieldset>
+            <legend>기본 정보</legend>
+            <p>
+                <label for="userId">아이디</label>
+                <input
+                    type="text"
+                    id="userId"
+                    name="userId"
+                    placeholder="아이디를 입력하세요"
+                    required
+                >
+            </p>
+            <p>
+                <label for="password">비밀번호</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="비밀번호를 입력하세요"
+                    required
+                >
+            </p>
+            <p>
+                <label for="userName">이름</label>
+                <input
+                    type="text"
+                    id="userName"
+                    name="userName"
+                    placeholder="이름을 입력하세요"
+                    required
+                >
+            </p>
+            <p>
+                <label for="email">이메일</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required
+                >
+            </p>
+            <p>
+                <label for="birthDate">생년월일</label>
+                <input
+                    type="date"
+                    id="birthDate"
+                    name="birthDate"
+                    required
+                >
+            </p>
+            <p>
+                성별
+
+                <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    required
+                >
+                <label for="male">남성</label>
+
+                <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                >
+                <label for="female">여성</label>
+            </p>
+            <p>
+                관심 분야
+
+                <input
+                    type="checkbox"
+                    id="DB"
+                    name="interest"
+                    value="DB"
+                >
+                <label for="DB">DB systems</label>
+
+                <input
+                    type="checkbox"
+                    id="python"
+                    name="interest"
+                    value="python"
+                >
+                <label for="python">Python</label>
+
+                <input
+                    type="checkbox"
+                    id="ai"
+                    name="interest"
+                    value="ai"
+                >
+                <label for="ai">인공지능</label>
+
+                 <input
+                    type="checkbox"
+                    id="Frontend"
+                    name="interest"
+                    value="Frontend"
+                >
+                <label for="ai">Frontend</label>
+                 
+                <input
+                    type="checkbox"
+                    id="Backend"
+                    name="interest"
+                    value="Backend"
+                >
+                <label for="ai">Backend</label>
+            </p>
+            <p>
+                <label for="region">거주 지역</label>
+
+                <select id="region" name="region" required>
+                    <option value="">지역을 선택하세요</option>
+                    <option value="seoul">서울</option>
+                    <option value="gyeonggi">경기</option>
+                    <option value="busan">부산</option>
+                    <option value="etc">기타</option>
+                </select>
+            </p>
+
+             <p>
+                <label for="recommendation">가입 경로</label>
+
+                <select id="recommendation" name="recommendation" required>
+                    <option value="SNS">SNS</option>
+                    <option value="Linkedin">Linkedin</option>
+                    <option value="Friends">친구</option>
+                    <option value="etc">기타</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="introduction">자기소개</label><br>
+
+                <textarea
+                    id="introduction"
+                    name="introduction"
+                    rows="5"
+                    cols="40"
+                    placeholder="자기소개를 입력하세요"
+                    required
+                ></textarea>
+            </p>
+            <p>
+                <input
+                    type="checkbox"
+                    id="agreement"
+                    name="agreement"
+                    value="agree"
+                    required
+                >
+                <label for="agreement">회원가입 약관에 동의합니다.</label>
+            </p>
+            <p>
+                <input type="submit" value="회원가입">
+                <input type="reset" value="다시 작성">
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+</html>
