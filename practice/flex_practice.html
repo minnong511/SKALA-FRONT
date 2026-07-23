@@ -1,0 +1,77 @@
+<!-- Flexbox  개인 연습 
+
+ .navbar에 Flexbox 사용
+SKALA는 왼쪽
+메뉴는 오른쪽
+메뉴 사이 간격은 20px
+모든 요소를 세로 가운데 정렬
+배경색은 자유
+
+-->
+
+<!DOCTYPE html>
+<html lang="ko">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 연습</title>
+
+    <style> 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            height: 100px;
+            background-color: lightyellow;
+            border: 1px solid orange;
+
+            /* 카드 안의 글자를 가운데 정렬해 봐 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar">
+    <h1>SKALA</h1>
+
+    <div class="menu">
+        <a href="#">홈</a>
+        <a href="#">수업</a>
+        <a href="#">프로필</a>
+    </div>
+    </nav>
+
+    <br> 
+
+    <div class="card-container">
+        <div class="card">카드 1</div>
+        <div class="card">카드 2</div>
+        <div class="card">카드 3</div>
+        <div class="card">카드 4</div>
+        <div class="card">카드 5</div>
+        <div class="card">카드 6</div>
+    </div>
+
+</body>
+
+</html>
