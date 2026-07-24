@@ -1,3 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 1.7;
+    color: #25324a;
+    background-color: #eef3f8;
+}
+
+.container {
+    width: min(1100px, calc(100% - 32px));
+    margin: 40px auto;
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgb(30 55 90 / 10%);
+}
+
+h1 {
+    margin-top: 0;
+    padding-bottom: 12px;
+    color: #16324f;
+    font-size: 2rem;
+    border-bottom: 3px solid #78a9e6;
+}
+
+h2 {
+    margin-top: 28px;
+    padding-left: 12px;
+    color: #356ae6;
+    font-size: 1.35rem;
+    border-left: 4px solid #78a9e6;
+}
+
+a {
+    color: #285fbd;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+a:hover {
+    color: #173f83;
+    text-decoration: underline;
+}
+
 .page-header h1 {
     opacity: 0;
     animation: fade-in 1s ease-out forwards;
@@ -17,7 +70,8 @@
 
 .shortcut-list {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
     padding: 0;
     list-style: none;
 }
@@ -26,23 +80,30 @@
 .signup-button {
     display: inline-block;
     padding: 10px 14px;
-    color: #222222;
-    background-color: #eeeeee;
-    text-decoration: none;
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
+    color: #25324a;
+    background-color: #e7eef8;
+    border: 1px solid #c8d7ea;
+    border-radius: 8px;
 }
 
 .shortcut-list a:hover,
 .signup-button:hover {
     color: #ffffff;
     background-color: #356ae6;
+    text-decoration: none;
 }
 
 .content-layout {
     display: flex;
-    gap: 30px;
+    gap: 24px;
+}
+
+.content-layout main,
+.content-layout aside {
+    padding: 24px;
+    background-color: #f8fafc;
+    border: 1px solid #d9e2ec;
+    border-radius: 12px;
 }
 
 .content-layout main {
@@ -60,10 +121,12 @@
 }
 
 .trip-card {
-    padding: 16px;
-    border: 1px solid #cccccc;
+    margin: 0;
+    padding: 18px;
+    background-color: #f8fbff;
+    border: 1px solid #bfd0e5;
+    border-radius: 12px;
     box-shadow: 0 3px 8px rgb(0 0 0 / 12%);
-    cursor: pointer;
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -74,11 +137,21 @@
     box-shadow: 0 12px 24px rgb(0 0 0 / 28%);
 }
 
+.trip-card-title {
+    display: block;
+    margin-bottom: 12px;
+    color: #16324f;
+    font-size: 1.1rem;
+}
+
 .trip-card img,
 .trip-card video,
 .trip-card iframe {
+    display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
     object-fit: cover;
 }
 
@@ -86,7 +159,92 @@
     width: 100%;
 }
 
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #b8c8da;
+}
+
+thead th {
+    color: #ffffff;
+    background-color: #356ae6;
+}
+
+tbody th {
+    color: #16324f;
+    background-color: #e7eef8;
+}
+
+tbody tr:nth-child(even) td {
+    background-color: #f7f9fc;
+}
+
+.lunch-time {
+    color: #7b4b00;
+    background-color: #fff3cd;
+    font-weight: 700;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #bfd0e5;
+    border-radius: 10px;
+}
+
+legend {
+    padding: 0 8px;
+    color: #16324f;
+    font-weight: 700;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+    padding: 8px;
+    border: 1px solid #b8c8da;
+    border-radius: 6px;
+}
+
+button {
+    padding: 9px 14px;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    color: #ffffff;
+    background-color: #356ae6;
+}
+
 @media (max-width: 786px) {
+    .container {
+        margin: 16px auto;
+        padding: 20px;
+    }
+
     .shortcut-list,
     .content-layout {
         flex-direction: column;

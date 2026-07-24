@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>😀 나의 강의 시간표</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 
@@ -17,9 +18,11 @@ rowspan="2": 아래쪽 셀까지 2칸 합치기 -->
 
 
 <body>
-    <h1>😆 나의 강의 시간표</h1>
+    <div class="container">
+        <h1>😆 나의 강의 시간표</h1>
 
-    <table border="1" cellpadding="10">
+        <div class="table-wrap">
+            <table>
         <thead>
             <tr>
                 <th>시간</th>
@@ -37,7 +40,7 @@ rowspan="2": 아래쪽 셀까지 2칸 합치기 -->
                 <td rowspan="3"><mark>트랜스포머</mark><br>Q,K,V 실습</td>
                 <td rowspan="2">네트워크 아키텍쳐 배우기<br>TCP/IP</td>
                 <td rowspan="3">웹 시스템<br>HTML/CSS</td>
-                <td>자바스크립트</td><br>일반 학습<br>
+                <td>자바스크립트<br>일반 학습</td>
                 <td rowspan="3">자바스크립트<br>심화 실습</td>
             </tr>
 
@@ -53,7 +56,7 @@ rowspan="2": 아래쪽 셀까지 2칸 합치기 -->
 
             <tr>
                 <th>12:00 - 13:00</th>
-                <td colspan="5" align="center"><strong>😆😆😆😆😆 점심시간 😆😆😆😆😆</strong></td>
+                <td class="lunch-time" colspan="5"><strong>😆😆😆😆😆 점심시간 😆😆😆😆😆</strong></td>
                 <!--colspan="5"은 옆 칼럼 다 합치기임 -->
             </tr>
 
@@ -88,6 +91,8 @@ rowspan="2": 아래쪽 셀까지 2칸 합치기 -->
                 <td>주간 회고</td>
             </tr>
         </tbody>
-    </table>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <form action="signUpResult.html" method="get">
+    <div class="container">
+        <h1>회원가입</h1>
+        <form action="signUpResult.html" method="get">
         <!-- 회원가입 form 이다
 
          get 방식으로 데이터를 전송한다 
@@ -138,7 +141,7 @@
                     name="interest"
                     value="Frontend"
                 >
-                <label for="ai">Frontend</label>
+                <label for="Frontend">Frontend</label>
                  
                 <input
                     type="checkbox"
@@ -146,7 +149,7 @@
                     name="interest"
                     value="Backend"
                 >
-                <label for="ai">Backend</label>
+                <label for="Backend">Backend</label>
             </p>
             <p>
                 <label for="region">거주 지역</label>
@@ -198,7 +201,8 @@
                 <button type="reset">다시 작성</button>
             </p>
         </fieldset>
-    </form>
+        </form>
+    </div>
 
 </body>
 </html>
